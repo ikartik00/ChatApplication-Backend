@@ -13,7 +13,8 @@ public class CorsConfig {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**") // sab endpoints ke liye
-						.allowedOrigins("http://localhost:5173") // frontend URL
+						.allowedOrigins("http://localhost:5173", "https://chat-application-frontend-red.vercel.app")
+						// frontend URL
 						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS").allowedHeaders("*")
 						.allowCredentials(true);
 			}
