@@ -59,6 +59,7 @@ public class AuthService {
 		try {
 			emailService.sendVerifyOtp(email, otp);
 		} catch (Exception e) {
+			e.printStackTrace();			
 			throw new RuntimeException("Unable to Send Email");
 		}
 	}
