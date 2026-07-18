@@ -46,7 +46,8 @@ public class AuthController {
 					.httpOnly(true)
 					.path("/")
 					.maxAge(Duration.ofDays(1))
-					.sameSite("Lax")
+					.sameSite("None")
+					.secure(true)
 					.build();
 			return ResponseEntity
 					.ok()
@@ -82,7 +83,8 @@ public class AuthController {
 				.secure(false)
 				.path("/")
 				.maxAge(0)
-				.sameSite("Lax")
+				.sameSite("None")
+				.secure(true)
 				.build();
 		return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, cookie.toString()).body("Logout Successfull");
 	}
