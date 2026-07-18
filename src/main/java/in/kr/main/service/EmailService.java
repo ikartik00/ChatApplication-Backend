@@ -76,7 +76,7 @@ public class EmailService {
                 + "\"sender\":{\"email\":\"" + fromEmail + "\"},"
                 + "\"to\":[{\"email\":\"" + email + "\"}],"
                 + "\"subject\":\"Reset Password Link\","
-                + "\"htmlContent\":\"<p>Hello," + email + "YWe received a request to reset your password. <b><b> Click the or link below to create a new password : <b> http://localhost:5173/reset-password?token="+token + "<b> This Link Will Expire in 5 Minutes <b><b>Regards, <b> ChitChat Application</b></p>\""
+                + "\"htmlContent\":\"<p>Hello," + email + "YWe received a request to reset your password. </br></br> Click the or link below to create a new password : <b> https://chat-application-frontend-red.vercel.app/reset-password?token="+token + "</br> </br> This Link Will Expire in 5 Minutes <b><b>Regards, <b> ChitChat Application</b></p>\""
                 + "}";
 
         HttpEntity<String> entity = new HttpEntity<>(jsonBody, headers);
