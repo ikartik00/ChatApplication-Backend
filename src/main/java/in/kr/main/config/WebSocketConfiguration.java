@@ -17,7 +17,7 @@ public class WebSocketConfiguration implements WebSocketMessageBrokerConfigurer 
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
 		// /chat endpoint connection ko establish karega matlab frontend se request connection ke liye /chat par aaegi
 		registry.addEndpoint("/chat")
-				.setAllowedOrigins("http://localhost:5173")
+				.setAllowedOrigins("http://localhost:5173", "https://chat-application-frontend-red.vercel.app")
 				.withSockJS();
 		//sockJs batata ha ki agar koi browser websocket ko support nhi karta ha to ye alternative ways provide karta ha jaise polling bagera etc.
 	}
